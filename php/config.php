@@ -1,9 +1,9 @@
 <?php
 // config.php
 $host = "localhost"; // Host database
-$username = ""; // Username database
+$username = "root"; // Username database
 $password = ""; // Password database 
-$database = ""; // Nama database
+$database = "delivery_request"; // Nama database
 
 // Set timezone PHP PERTAMA KALI
 date_default_timezone_set('Asia/Jakarta');

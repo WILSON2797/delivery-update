@@ -1125,3 +1125,70 @@ input:checked + .toggle-slider:before {
 .table-search .input-group-solid:focus-within i {
     color: #0d6efd !important;
 }
+
+/*  styling Dashboard Delivery */
+
+/* ===== Border colors ===== */
+.border-left-primary  { border-left: 0.25rem solid #4e73df !important; }
+.border-left-success  { border-left: 0.25rem solid #1cc88a !important; }
+.border-left-info     { border-left: 0.25rem solid #36b9cc !important; }
+.border-left-warning  { border-left: 0.25rem solid #f6c23e !important; }
+.border-left-danger   { border-left: 0.25rem solid #e74a3b !important; }
+.border-left-dark     { border-left: 0.25rem solid #858796 !important; }
+.border-left-purple   { border-left: 0.25rem solid #6f42c1 !important; }
+.border-left-orange   { border-left: 0.25rem solid #ff8000 !important; }
+.border-left-teal     { border-left: 0.25rem solid #17a2b8 !important; }
+.border-left-red      { border-left: 0.25rem solid #dc3545 !important; }
+.border-left-green    { border-left: 0.25rem solid #20c997 !important; }
+
+/* ===== Text colors ===== */
+.text-purple  { color: #6f42c1 !important; }
+.text-orange  { color: #ff8000 !important; }
+.text-teal    { color: #17a2b8 !important; }
+.text-red     { color: #dc3545 !important; }
+.text-green   { color: #20c997 !important; }
+
+/* ===== Icon circle ===== */
+.icon-circle {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feather-icon { width: 1.3rem; height: 1.3rem; }
+.feather-sm   { width: 1rem;   height: 1rem;   }
+
+/* ===== Soft background colors for icon circles ===== */
+.bg-primary-soft { background-color: rgba(78, 115, 223, 0.12); }
+.bg-success-soft { background-color: rgba(28, 200, 138, 0.12); }
+.bg-warning-soft { background-color: rgba(246, 194, 62, 0.12); }
+.bg-info-soft    { background-color: rgba(54, 185, 204, 0.12); }
+.bg-dark-soft    { background-color: rgba(133, 135, 150, 0.12); }
+.bg-purple-soft  { background-color: rgba(111, 66, 193, 0.12); }
+.bg-orange-soft  { background-color: rgba(255, 128, 0, 0.12); }
+.bg-teal-soft    { background-color: rgba(23, 162, 184, 0.12); }
+.bg-red-soft     { background-color: rgba(220, 53, 69, 0.12); }
+.bg-green-soft   { background-color: rgba(32, 201, 151, 0.12); }
+
+/* ===== Card styling ===== */
+.stat-card {
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-title-stat {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.chart-area, .chart-pie { position: relative; }

@@ -18,20 +18,41 @@ if (!isset($_SESSION['username'])) {
         </button>
     </div>
 
-    <!-- Content Row - Summary Cards -->
+    <!-- Content Row - Summary Cards (4 per row) -->
     <div class="row">
+
         <!-- Total DN Number -->
-        <div class="col-xl-4 col-md-6 mb-4 dashboard-card-animate dashboard-card-1">
-            <div class="card border-left-primary shadow h-100 py-2">
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-1">
+            <div class="card stat-card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="card-title-stat text-primary text-uppercase mb-1">
-                                Total DN Number</div>
+                            <div class="card-title-stat text-primary text-uppercase mb-1">Total DN Number</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalDnNumber">0</div>
                         </div>
                         <div class="col-auto">
-                            <i data-feather="file-text" class="feather-2x text-primary"></i>
+                            <div class="icon-circle bg-primary-soft">
+                                <i data-feather="file-text" class="feather-icon text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Planned -->
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-2">
+            <div class="card stat-card border-left-green shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="card-title-stat text-green text-uppercase mb-1">Planned</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalPlanned">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon-circle bg-green-soft">
+                                <i data-feather="calendar" class="feather-icon text-green"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,17 +60,18 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <!-- Handover Done -->
-        <div class="col-xl-4 col-md-6 mb-4 dashboard-card-animate dashboard-card-2">
-            <div class="card border-left-danger shadow h-100 py-2">
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-3">
+            <div class="card stat-card border-left-danger shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="card-title-stat text-success text-uppercase mb-1">
-                                Handover Done</div>
+                            <div class="card-title-stat text-success text-uppercase mb-1">Handover Done</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalHandover">0</div>
                         </div>
                         <div class="col-auto">
-                            <i data-feather="check-circle" class="feather-2x text-danger"></i>
+                            <div class="icon-circle bg-success-soft">
+                                <i data-feather="check-circle" class="feather-icon text-danger"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,17 +79,18 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <!-- Total On Delivery -->
-        <div class="col-xl-4 col-md-6 mb-4 dashboard-card-animate dashboard-card-3">
-            <div class="card border-left-success shadow h-100 py-2">
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-4">
+            <div class="card stat-card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="card-title-stat text-primary text-uppercase mb-1">
-                                Total On Delivery</div>
+                            <div class="card-title-stat text-primary text-uppercase mb-1">On Delivery</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalOnDelivery">0</div>
                         </div>
                         <div class="col-auto">
-                            <i data-feather="truck" class="feather-2x text-success"></i>
+                            <div class="icon-circle bg-teal-soft">
+                                <i data-feather="truck" class="feather-icon text-success"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,17 +98,18 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <!-- Total Onsite -->
-        <div class="col-xl-4 col-md-6 mb-4 dashboard-card-animate dashboard-card-4">
-            <div class="card border-left-warning shadow h-100 py-2">
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-4">
+            <div class="card stat-card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="card-title-stat text-warning text-uppercase mb-1">
-                                Total Onsite</div>
+                            <div class="card-title-stat text-warning text-uppercase mb-1">Onsite</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalOnsite">0</div>
                         </div>
                         <div class="col-auto">
-                            <i data-feather="map-pin" class="feather-2x text-warning"></i>
+                            <div class="icon-circle bg-warning-soft">
+                                <i data-feather="map-pin" class="feather-icon text-warning"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,17 +117,18 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <!-- Total Back To Pool -->
-        <div class="col-xl-4 col-md-6 mb-4 dashboard-card-animate dashboard-card-4">
-            <div class="card border-left-info shadow h-100 py-2">
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-4">
+            <div class="card stat-card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="card-title-stat text-info text-uppercase mb-1">
-                                Total Back To Pool</div>
+                            <div class="card-title-stat text-info text-uppercase mb-1">Back To Pool</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalBTP">0</div>
                         </div>
                         <div class="col-auto">
-                            <i data-feather="refresh-cw" class="feather-2x text-info"></i>
+                            <div class="icon-circle bg-info-soft">
+                                <i data-feather="refresh-cw" class="feather-icon text-info"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,23 +136,104 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <!-- Total Pool Mover -->
-        <div class="col-xl-4 col-md-6 mb-4 dashboard-card-animate dashboard-card-4">
-            <div class="card border-left-dark shadow h-100 py-2">
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-5">
+            <div class="card stat-card border-left-dark shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="card-title-stat text-dark text-uppercase mb-1">
-                                Total Pool Mover</div>
+                            <div class="card-title-stat text-dark text-uppercase mb-1">Pool Mover</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalPoolMover">0</div>
                         </div>
                         <div class="col-auto">
-                            <i data-feather="package" class="feather-2x text-dark"></i>
+                            <div class="icon-circle bg-dark-soft">
+                                <i data-feather="package" class="feather-icon text-dark"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Waiting Inbound -->
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-5">
+            <div class="card stat-card border-left-purple shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="card-title-stat text-purple text-uppercase mb-1">Waiting Inbound</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalWaitingInbound">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon-circle bg-purple-soft">
+                                <i data-feather="download" class="feather-icon text-purple"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back To WH -->
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-5">
+            <div class="card stat-card border-left-orange shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="card-title-stat text-orange text-uppercase mb-1">Back To WH</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalBackToWH">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon-circle bg-orange-soft">
+                                <i data-feather="home" class="feather-icon text-orange"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waiting Pickup -->
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-5">
+            <div class="card stat-card border-left-teal shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="card-title-stat text-teal text-uppercase mb-1">Waiting Pickup</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalWaitingPickup">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon-circle bg-teal-soft">
+                                <i data-feather="clock" class="feather-icon text-teal"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancelled -->
+        <div class="col-xl-3 col-md-6 mb-4 dashboard-card-animate dashboard-card-5">
+            <div class="card stat-card border-left-red shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="card-title-stat text-red text-uppercase mb-1">Cancelled</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalCancelled">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon-circle bg-red-soft">
+                                <i data-feather="x-circle" class="feather-icon text-red"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
     </div>
+    <!-- END Content Row - Summary Cards -->
 
     <!-- Content Row - Charts -->
     <div class="row">
@@ -188,22 +294,17 @@ if (!isset($_SESSION['username'])) {
                         <canvas id="stockPieChart"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-danger"></i> Handover Done
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> On Delivery
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-warning"></i> Onsite
-                        </span>
-                        <br class="d-sm-none">
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-info"></i> Back To Pool
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-dark"></i> Pool Mover
-                        </span>
+                        <span class="mr-2"><i class="fas fa-circle text-danger"></i> Handover Done</span>
+                        <span class="mr-2"><i class="fas fa-circle text-success"></i> On Delivery</span>
+                        <span class="mr-2"><i class="fas fa-circle text-warning"></i> Onsite</span>
+                        <span class="mr-2"><i class="fas fa-circle text-info"></i> Back To Pool</span>
+                        <span class="mr-2"><i class="fas fa-circle text-secondary"></i> Pool Mover</span>
+                        <br>
+                        <span class="mr-2"><i class="fas fa-circle" style="color:#6f42c1;"></i> Waiting Inbound</span>
+                        <span class="mr-2"><i class="fas fa-circle" style="color:#ff8000;"></i> Back To WH</span>
+                        <span class="mr-2"><i class="fas fa-circle" style="color:#17a2b8;"></i> Waiting Pickup</span>
+                        <span class="mr-2"><i class="fas fa-circle" style="color:#dc3545;"></i> Cancelled</span>
+                        <span class="mr-2"><i class="fas fa-circle" style="color:#20c997;"></i> Planned</span>
                     </div>
                 </div>
             </div>
@@ -212,80 +313,4 @@ if (!isset($_SESSION['username'])) {
 
 </div>
 
-<style>
-    /* Custom styles for dashboard */
-    .border-left-primary {
-        border-left: 0.25rem solid #4e73df !important;
-    }
-    
-    .border-left-success {
-        border-left: 0.25rem solid #1cc88a !important;
-    }
-    
-    .border-left-info {
-        border-left: 0.25rem solid #36b9cc !important;
-    }
-    
-    .border-left-warning {
-        border-left: 0.25rem solid #f6c23e !important;
-    }
-    
-    .border-left-danger {
-        border-left: 0.25rem solid #e74a3b !important;
-    }
-    
-    .border-left-dark {
-        border-left: 0.25rem solid #858796 !important;
-    }
-    
-    .text-primary-300 {
-        color: #4e73df !important;
-    }
-    
-    .text-success-300 {
-        color: #1cc88a !important;
-    }
-    
-    .text-info-300 {
-        color: #36b9cc !important;
-    }
-    
-    .text-warning-300 {
-        color: #f6c23e !important;
-    }
-    
-    .text-danger {
-        color: #e74a3b !important;
-    }
-    
-    .text-dark-300 {
-        color: #858796 !important;
-    }
-    
-    .feather-2x {
-        width: 2rem;
-        height: 2rem;
-    }
-    
-    .feather-sm {
-        width: 1rem;
-        height: 1rem;
-    }
-    
-    .card {
-        border: none;
-        transition: transform 0.2s;
-    }
-    
-    .card:hover {
-        transform: translateY(-5px);
-    }
-    
-    .chart-area {
-        position: relative;
-    }
-    
-    .chart-pie {
-        position: relative;
-    }
-</style>
+<link rel="stylesheet" href="dashboard.css">

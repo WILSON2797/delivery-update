@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
 try {
 
     
-    // Tampilkan semua data KECUALI yang statusnya 'Handover Done'
+    // Tampilkan semua data KECUALI yang statusnya 'Handover Done , Cancelled , Back To Pool & Back To WH'
    $query = "
     SELECT 
         id,
@@ -38,7 +38,7 @@ try {
         updated_at
     FROM daily_report
     WHERE status IS NULL
-       OR status NOT IN (?, ?, ?)
+       OR status NOT IN (?, ?, ?, ?)
     ORDER BY updated_at DESC, id DESC
 ";
     
@@ -50,7 +50,8 @@ try {
     $excludeStatus1 = 'Handover Done';
     $excludeStatus2 = 'Back To Pool';
     $excludeStatus3 = 'Cancelled';
-    $stmt->bind_param("sss", $excludeStatus1, $excludeStatus2, $excludeStatus3);
+    $excludeStatus4 = 'Back To WH';
+    $stmt->bind_param("ssss", $excludeStatus1, $excludeStatus2, $excludeStatus3, $excludeStatus4);
 
     // ===============================
     // EXECUTE

@@ -45,23 +45,57 @@ try {
     $resultPoolMover = $conn->query($queryPoolMover);
     $totalPoolMover = $resultPoolMover->fetch_assoc()['total'];
     
-    // Total Handover Done (untuk chart)
+    // Total Handover Done
     $queryHandoverDone = "SELECT COUNT(*) as total FROM daily_report WHERE status = 'Handover Done'";
     $resultHandoverDone = $conn->query($queryHandoverDone);
     $totalHandoverDone = $resultHandoverDone->fetch_assoc()['total'];
-    
+
+    // ===============================
+    // STATUS BARU
+    // ===============================
+
+    // Total Waiting Inbound
+    $queryWaitingInbound = "SELECT COUNT(*) as total FROM daily_report WHERE status = 'Waiting Inbound'";
+    $resultWaitingInbound = $conn->query($queryWaitingInbound);
+    $totalWaitingInbound = $resultWaitingInbound->fetch_assoc()['total'];
+
+    // Total Back To WH
+    $queryBackToWH = "SELECT COUNT(*) as total FROM daily_report WHERE status = 'Back To WH'";
+    $resultBackToWH = $conn->query($queryBackToWH);
+    $totalBackToWH = $resultBackToWH->fetch_assoc()['total'];
+
+    // Total Waiting Pickup
+    $queryWaitingPickup = "SELECT COUNT(*) as total FROM daily_report WHERE status = 'Waiting Pickup'";
+    $resultWaitingPickup = $conn->query($queryWaitingPickup);
+    $totalWaitingPickup = $resultWaitingPickup->fetch_assoc()['total'];
+
+    // Total Cancelled
+    $queryCancelled = "SELECT COUNT(*) as total FROM daily_report WHERE status = 'Cancelled'";
+    $resultCancelled = $conn->query($queryCancelled);
+    $totalCancelled = $resultCancelled->fetch_assoc()['total'];
+
+    // Total Planned
+    $queryPlanned = "SELECT COUNT(*) as total FROM daily_report WHERE status = 'Planned'";
+    $resultPlanned = $conn->query($queryPlanned);
+    $totalPlanned = $resultPlanned->fetch_assoc()['total'];
+
     // ===============================
     // RESPONSE
     // ===============================
     echo json_encode([
         'status' => 'success',
         'data' => [
-            'total_dn_number' => (int)$totalDN,
-            'total_on_delivery' => (int)$totalOnDelivery,
-            'total_onsite' => (int)$totalOnsite,
-            'total_btp' => (int)$totalBTP,
-            'total_pool_mover' => (int)$totalPoolMover,
-            'total_handover_done' => (int)$totalHandoverDone
+            'total_dn_number'       => (int)$totalDN,
+            'total_on_delivery'     => (int)$totalOnDelivery,
+            'total_onsite'          => (int)$totalOnsite,
+            'total_btp'             => (int)$totalBTP,
+            'total_pool_mover'      => (int)$totalPoolMover,
+            'total_handover_done'   => (int)$totalHandoverDone,
+            'total_waiting_inbound' => (int)$totalWaitingInbound,
+            'total_back_to_wh'      => (int)$totalBackToWH,
+            'total_waiting_pickup'  => (int)$totalWaitingPickup,
+            'total_cancelled'       => (int)$totalCancelled,
+            'total_planned'         => (int)$totalPlanned
         ]
     ]);
 
