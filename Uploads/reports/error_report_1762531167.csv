@@ -1,0 +1,2 @@
+"PO Number",Supplier,"Reference Number","Packing List","Item Code",Qty,Locator,"Stock Type","Error Log"
+PO-2025-001,"PT SUPPLIER A",REF-001,PL-001,CB-60X40X50,10,BPP-A-1,TELCO,"duplicate PO Number"

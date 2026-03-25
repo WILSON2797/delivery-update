@@ -1,0 +1,3 @@
+"PO Number",Supplier,"Reference Number","Packing List","Item Code",Qty,Locator,"Error Log"
+INBOUND-LAPPET,INBOUND-LAPPET,INBOUND-LAPPET,INBOUND-LAPPET,GELAS,500,POOL,"Item Code GELAS tidak ditemukan atau tidak sesuai project ASSETS pada baris 2"
+INBOUND-LAPPET,INBOUND-LAPPET,INBOUND-LAPPET,INBOUND-LAPPET,BAN-7.50,300,POOL,Pending

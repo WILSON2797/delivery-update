@@ -1,0 +1,4 @@
+"PO Number",Supplier,"Reference Number","Packing List","Item Code",Qty,Locator,"Error Log"
+INBOUND-TES,INBOUND-TES,INBOUND-TES,INBOUND-TES,MEJA001,10,C-3,"Locator C-3 tidak valid untuk WH_Name WH CIKARANG pada baris 2"
+INBOUND-TES,INBOUND-TES,INBOUND-TES,INBOUND-TES,KURSI001,10,C-2,"Locator C-2 tidak valid untuk WH_Name WH CIKARANG pada baris 3"
+INBOUND-TES,INBOUND-TES,INBOUND-TES,INBOUND-TES,ANTENNA001,10,D-2,"Locator D-2 tidak valid untuk WH_Name WH CIKARANG pada baris 4"

@@ -1,0 +1,122 @@
+/* ========================================
+   ANIMATIONS FOR SIDEBAR & HEADER
+   ======================================== */
+
+/* Keyframe Animation: Sidebar Fade In from Left */
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframe Animation: Header Fade In from Top */
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation to Sidebar */
+#layoutSidenav_nav {
+    animation: fadeInFromLeft 0.8s ease-out;
+}
+
+/* Apply Animation to Header/Topnav */
+.topnav.navbar {
+    animation: fadeInFromTop 0.8s ease-out;
+}
+
+/* Optional: Smooth transition for sidebar items */
+#layoutSidenav_nav .sidenav-menu .nav-link {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+#layoutSidenav_nav .sidenav-menu .nav-link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#layoutSidenav_nav .sidenav-menu .nav-link:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+#layoutSidenav_nav .sidenav-menu .nav-link:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#layoutSidenav_nav .sidenav-menu .nav-link:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+#layoutSidenav_nav .sidenav-menu .nav-link:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+/* Simple fade in for menu items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Add smooth transition when sidebar toggles */
+#layoutSidenav_nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+ /*Dashboard Animation*/
+@keyframes cardFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base animation for all dashboard cards */
+.dashboard-card-animate {
+    opacity: 0;
+    animation: cardFadeInUp 0.8s ease-out forwards;
+}
+
+/* Individual card delays */
+.dashboard-card-1 { animation-delay: 0.2s; }
+.dashboard-card-2 { animation-delay: 0.4s; }
+.dashboard-card-3 { animation-delay: 0.6s; }
+.dashboard-card-4 { animation-delay: 0.8s; }
+.dashboard-card-5 { animation-delay: 1.0s; }
+.dashboard-card-6 { animation-delay: 1.2s; }
+.dashboard-chart-1 { animation-delay: 1.4s; }
+.dashboard-chart-2 { animation-delay: 1.6s; }
+
+/* Card hover effect */
+.dashboard-card-animate .card {
+    transition: all 0.3s ease;
+}
+
+.dashboard-card-animate .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
